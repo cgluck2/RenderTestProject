@@ -1,8 +1,10 @@
 import express from "express";
 const app = express();
 
+const myName = process.env.MY_NAME || "Chaim";
+
 app.get("/", (req, res) => {
-  res.send("Hello, Chaim! Your server is working on Render.");
+  res.send(`Hello, ${myName}! Your server is working on Render.`);
 });
 
 const port = process.env.PORT || 3000;
